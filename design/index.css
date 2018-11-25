@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+}
+
+.flex-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.release {
+    width: 100%;
+}
+
+.section-head {
+    width: 100%;
+}
+
+.release .head-vwrap {
+    width: 100%;
+    height: 97vh;
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.release .head-hwrap {
+    position: relative;
+    margin: auto;
+}
+
+.release .head-envelope {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    
+    -webkit-box-align: center;
+    
+    -ms-flex-align: center;
+    
+    align-items: center;
+    
+    -webkit-box-orient: horizontal;
+    
+    -webkit-box-direction: normal;
+    
+    -ms-flex-direction: row;
+    
+    flex-direction: row;
+}
+
+.release .section-head span {
+    text-overflow: clip;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.release .head-envelope-details-issue span {
+    font-family: 'Georgia';
+    color: #FFB6A9;
+    font-size: 20px;
+    
+    margin-right: 15px;
+}
+
+.release .head-envelope-details-issue span.vol {
+    color: #656565;
+}
+
+.release .head-envelope-details-issue span.dat {
+    color: #AAAAAA;
+}
+
+.release .head-envelope-details-branding span {
+    font-family: 'Futura Condensed ExtraBold';
+    color: #FFB6A9;
+    font-size: 86px;
+    text-transform: uppercase;
+    line-height: 95px;
+}
+
+.release .head-envelope img {
+    float: left;
+    
+    -webkit-box-flex: 2;
+    
+    -ms-flex-positive: 2;
+    
+    flex-grow: 2;
+    
+    max-width: 30%;
+}
+
+.release .head-envelope .head-envelope-details {
+    float: right;
+    margin-left: 35px;
+    position: relative;
+    
+    -webkit-box-flex: 1;
+    
+    -ms-flex-positive: 1;
+    
+    flex-grow: 1;
+}
+
+.release .head-envelope .head-envelope-details-issue {
+    top: -40px;
+    position: absolute;
+}
+
+.release .section-head .head-body {
+    width: 100%;
+    height: 1000px;
+    
+    background-color: red;
+    
+    position: absolute;
+    
+    margin-top: 10vh;
+}

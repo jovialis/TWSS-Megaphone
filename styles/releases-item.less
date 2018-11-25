@@ -1,0 +1,75 @@
+.content-container .animated-fadein {
+    @transition-duration: 1s;
+    
+    opacity: 0;
+
+    -webkit-transition: opacity @transition-duration;    
+    transition: opacity @transition-duration;
+    
+    opacity: 1 !important;
+}
+
+.content-container .release-title-card-bumper {
+    position: relative;
+    width: 100%;
+    
+    height: 85vh;
+}
+
+.content-container .release-title-card-body {
+    position: absolute;
+    top: 0;
+    
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    
+    .release-title-card-liner {
+        position: relative;
+        margin: auto;
+        
+        display: flex;
+        align-items: center;    
+        
+        max-width: @big-width;
+    }
+    
+    img {
+        float: left;
+        
+        object-fit: contain;
+        
+        height: auto;
+        width: 100%;
+    }
+    
+    .release-title-details-wrapper {
+        float: right;
+        margin-left: 30px;
+        
+        .release-title-detail {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .site-branding {
+            color: @color-pink;
+            font-weight: bolder;
+            font-size: 56px;
+            text-transform: uppercase;
+            font-family: 'Futura', sans-serif;
+        }
+        
+        .issue-meta {
+            
+        }
+    }
+}
+
+.content-container .release-body {
+    max-width: @small-width;
+    position: relative;
+    margin: auto;
+}

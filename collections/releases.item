@@ -1,0 +1,149 @@
+
+{.section item}
+
+<!--WRAPPER-->
+<article id="release-{id}" class="{@|item-classes}" data-item-id="{id}">
+
+    <!--RELEASE HEADER: Branding, Issue #-->
+    <section class="section-head">
+
+        <div class="head-vwrap">
+            <div class="head-hwrap">
+
+                <div class="head-envelope">
+                    
+                    <img {customContent.banner|image-meta}/>
+                    
+                    <div class="head-envelope-details">
+                        
+                        <div class="head-envelope-details-branding">
+                            <span>That's What</span>
+                            <br>
+                            <span>She Said</span>
+                        </div>
+                        <div class="head-envelope-details-issue">
+                        
+                            
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="flex-wrapper">
+            <div class="middle-wrapper">
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!--RELEASE BODY-->
+    <section class="section-body">
+
+    </section>
+
+    <!--RELEASE FOOTER-->
+    <section class="section=footer">
+
+    </section>
+
+    <div class="release-title-card">
+        <div class="release-title-card-body">
+            <div class="release-title-card-liner">
+                <div class="release-title-details-wrapper">
+                    <span class="site-branding release-title-detail">
+                        That's What
+                        <br>
+                        She Said
+                    </span>
+                    <div class="issue-meta release-title-detail">
+                        <span class="issue-meta-item issue-meta-date">{customContent.volume}</span>
+                        <span class="issue-meta-item issue-meta-volume">{customContent.date}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="release-title-card-bumper">
+
+        </div>
+    </div>
+
+    <!--RELEASE BODY-->
+    <div class="release-body">
+        <!--MAIN CONTENT-->
+        {body}
+
+        <!--BLOG INJECTION-->
+        {postItemInjectCode}
+
+        <!--CATEGORIES-->
+        {.repeated section categories}
+        <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
+        {.end}
+
+        <!--TAGS-->
+        {.repeated section tags}
+        <a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}</a>{.alternates with},
+        {.end}
+
+        <!--SHARE AND LIKE-->
+        {@|like-button}
+    </div>
+
+</article>
+
+{.end}
+
+
+<!--PAGINATION-->
+{.section pagination}
+<nav class="blog-item-pagination">
+
+    <!--NEWER PAGE-->
+    {.section prevItem}
+    <a href="{fullUrl}">Newer</a>
+    {.or}
+    <a class="disabled">Newer</a>
+    {.end}
+
+    <!--OLDER PAGE-->
+    {.section nextItem}
+    <a href="{fullUrl}">Older</a>
+    {.or}
+    <a class="disabled">Older</a>
+    {.end}
+
+</nav>
+{.end}
+
+<!--HEADER SCRIPT-->
+<script>
+    // Initial settings for navigation bar
+    document.getElementById("site-navigation-wrapper-dummy").style.display = "none";
+
+    if (window.pageYOffset <= 100) { // Only perform animations if we're above the limit
+        let layoutBody = document.getElementsByClassName("sqs-layout")[0];
+        let wrapperPowered = document.getElementById("site-navigation-wrapper-powered");
+
+        layoutBody.style.opacity = 0;
+        wrapperPowered.style.opacity = 0;
+
+        // Change settings on scroll
+        let changed = false;
+        document.addEventListener("scroll", function() {
+            if (window.pageYOffset > 100 && !changed) {
+                layoutBody.classList.add("animated-fadein");
+                wrapperPowered.classList.add("animated-fadein");
+
+                changed = true;
+            }
+        });
+    }
+</script>
