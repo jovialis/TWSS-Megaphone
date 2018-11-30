@@ -1,168 +1,168 @@
 .section-content .article
 {
-  @transition-time: .2s;
+    @transition-time: .2s;
 
-  margin-top: 30px;
-  margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 100px;
 
-  .author
-  {
-    margin: 8px 0px 40px 0px;
-  }
+    .author
+    {
+        margin: 8px 0px 40px 0px;
+    }
 
-  .content .text .footnote
-  {
-      border-bottom: 5px solid @color-pink;
-      position: relative;
-
-      transition: border-bottom @transition-time;
-
-      @width: 300px;
-      .footnote-text
-      {
-          z-index: 3;
-
-          transition: height @transition-time, padding @transition-time;
-          height: 0px;
-
-          padding: 0px 15px 0px 15px;
-
-          overflow: hidden;
-          text-overflow: clip;
-
-          text-align: center;
-
-          position: absolute;
-          display: inline-block;
-
-          color: white;
-
-          background-color: @color-pink;
-
-          border-radius: 10px;
-
-          min-width: 200px;
-          max-width: @width;
-      }
-
-      &:hover
-      {
-          .footnote-text
-          {
-              height: auto;
-              padding: 10px 15px 10px 15px;
-          }
-
-          border-bottom: 0px solid @color-pink;
-          cursor: pointer
-      }
-  }
-
-  .content .text .text-link
-  {
-      position: relative;
-
-      a
-      {
-        transition: @transition-time border-bottom, @transition-time background-color;
+    .content .text .footnote
+    {
         border-bottom: 5px solid @color-pink;
+        position: relative;
 
-        text-decoration: none;
-        color: inherit;
-      }
+        transition: border-bottom @transition-time;
 
-      a:hover
-      {
-          border-bottom: 0px solid @color-pink;
-          background-color: @color-pink;
-      }
-  }
+        @width: 300px;
+        .footnote-text
+        {
+            z-index: 3;
 
-  .table-attachment
-  {
-      position: relative;
-      top: 0px;
+            transition: height @transition-time, padding @transition-time;
+            height: 0px;
 
-      width: 40%;
+            padding: 0px 15px 0px 15px;
 
-      margin-top: 6px;
-      margin-bottom: 30px;
+            overflow: hidden;
+            text-overflow: clip;
 
-      padding: 20px 30px 20px 30px;
-      background-color: @color-pink;
+            text-align: center;
 
-      border-radius: 5px 5px 5px 5px;
+            position: absolute;
+            display: inline-block;
 
-      table
-      {
-          width: 100%;
-          height: 100%;
+            color: white;
 
-          border-spacing: 0px;
-          border-collapse: collapse;
+            background-color: @color-pink;
 
-          a
-          {
-            text-decoration: none;
-          }
+            border-radius: 10px;
 
-          tr th, td
-          {
-              border-bottom: 4px solid @color-dark-pink;
+            min-width: 200px;
+            max-width: @width;
+        }
 
-              padding-top: 10px;
-              padding-bottom: 10px;
-          }
-
-          tr th // Header
-          {
-              text-align: left;
-              padding-bottom: 20px;
-          }
-
-          tr td h5
-          {
-            transition: .5s color;
-
-            &:hover
+        &:hover
+        {
+            .footnote-text
             {
-                color: white;
+                height: auto;
+                padding: 10px 15px 10px 15px;
             }
-          }
 
-          tr:last-child td
-          {
-              border-bottom: none;
-          }
-      }
-  }
+            border-bottom: 0px solid @color-pink;
+            cursor: pointer
+        }
+    }
 
-  .image-attachment
-  {
-      display: block;
+    .content .text .text-link
+    {
+        position: relative;
 
-      .description
-      {
-          margin: 0px 0px 0px 0px;
+        a
+        {
+            transition: @transition-time border-bottom, @transition-time background-color;
+            border-bottom: 5px solid @color-pink;
 
-          width: 100%;
-          text-align: center;
+            text-decoration: none;
+            color: inherit;
+        }
 
-          span
-          {
-            font-style: italic;
-            font-size: 18px;
-            font-weight: 100;
+        a:hover
+        {
+            border-bottom: 0px solid @color-pink;
+            background-color: @color-pink;
+        }
+    }
 
-            color: @color-grey;
-            letter-spacing: 1px;
-          }
-      }
-  }
+    .table-attachment
+    {
+        position: relative;
+        top: 0px;
+
+        width: 40%;
+
+        margin-top: 6px;
+        margin-bottom: 30px;
+
+        padding: 20px 30px 20px 30px;
+        background-color: @color-pink;
+
+        border-radius: 5px 5px 5px 5px;
+
+        table
+        {
+            width: 100%;
+            height: 100%;
+
+            border-spacing: 0px;
+            border-collapse: collapse;
+
+            a
+            {
+                text-decoration: none;
+            }
+
+            tr th, td
+            {
+                border-bottom: 4px solid @color-dark-pink;
+
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            tr th // Header
+            {
+                text-align: left;
+                padding-bottom: 20px;
+            }
+
+            tr td h5
+            {
+                transition: .5s color;
+
+                &:hover
+                {
+                    color: white;
+                }
+            }
+
+            tr:last-child td
+            {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .image-attachment
+    {
+        display: block;
+
+        .description
+        {
+            margin: 0px 0px 0px 0px;
+
+            width: 100%;
+            text-align: center;
+
+            span
+            {
+                font-style: italic;
+                font-size: 18px;
+                font-weight: 100;
+
+                color: @color-grey;
+                letter-spacing: 1px;
+            }
+        }
+    }
 }
 
 .section-content #editors-note .attachment
 {
-  float: right;
-  margin-left: 40px;
+    float: right;
+    margin-left: 40px;
 }

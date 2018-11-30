@@ -1,23 +1,16 @@
-<nav class="site-navigation">
-    <div id="site-navigation-wrapper-powered" class="site-navigation-wrapper">
-
-        <div class="site-navigation-section site-navigation-section-left">
+<nav id="navigation">
+    <div id="navigation-wrapper-powered" class="navigation-wrapper">
+        <div class="navigation-section navigation-section-left">
             <ul>
-                
                 {@|apply navigation-branding.block}
-                <squarespace:navigation navigationId="left-nav" template="navigation-left" />
-
+                <squarespace:navigation navigationId="navigation-left" template="navigation-left" />
             </ul>
         </div>
-
-        <div class="site-navigation-section site-navigation-section-right">
+        <div class="navigation-section navigation-section-right">
             <ul>
-
-                <squarespace:navigation navigationId="right-nav" template="navigation-right" />
-
+                <squarespace:navigation navigationId="navigation-right" template="navigation-right" />
             </ul>
         </div>
-
     </div>
-    <div id="site-navigation-wrapper-dummy" class="site-navigation-wrapper"></div>
+    <div id="navigation-wrapper-dummy" class="navigation-wrapper"></div>
 </nav>

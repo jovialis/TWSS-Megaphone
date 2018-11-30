@@ -73,8 +73,6 @@
     </div>
 </article>
 
-{.end}
-
 <!--HEADER SCRIPT-->
 
 <script>
@@ -85,7 +83,7 @@
         let layoutBody = document.getElementById("release-body");
         let wrapperPowered = document.getElementById("site-navigation-wrapper-powered");
 
-//        layoutBody.style.opacity = 0;
+        //        layoutBody.style.opacity = 0;
         wrapperPowered.style.opacity = 0;
 
         // Change settings on scroll
@@ -100,3 +98,5 @@
         });
     }
 </script>
+
+{.end}

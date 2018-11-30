@@ -1,0 +1,15 @@
+@transition-time: .1s;
+
+p > a {
+    border-bottom: 5px solid @color-pink;
+    text-decoration: none;
+    color: inherit;
+    
+    transition: border-bottom, background-color;
+    transition-duration: @transition-time;
+    
+    &:hover {
+        border-bottom: 0px solid @color-pink;
+        background-color: @color-pink;
+    }
+}

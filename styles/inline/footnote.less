@@ -1,0 +1,51 @@
+@transition-time: 0.2s;
+
+.body-container {
+
+    // FOOTNOTES
+    strong {
+        position: relative;
+        font-weight: normal;
+
+        border-bottom: 3px solid @color-pink;
+                
+        transition: border-bottom;
+        transition-duration: @transition-time;
+
+        & > em {
+            font-style: normal;
+
+            display: inline-block;
+            position: absolute;
+
+            left: 0;
+            top: 100%;
+
+            padding: 15px;
+            margin-top: 5px;
+            border-radius: 10px;
+
+            background-color: @color-pink;
+
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            
+            transition: height, opacity;
+            transition-duration: @transition-time;
+        }
+
+        &:hover {
+        border-bottom: 7px solid @color-pink;
+            
+            & > em {
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
+
+            cursor: pointer;
+        }
+    }
+
+}
