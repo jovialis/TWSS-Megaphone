@@ -1,16 +1,12 @@
 <nav id="navigation">
-    <div id="navigation-wrapper-powered" class="navigation-wrapper">
-        <div class="navigation-section navigation-section-left">
-            <ul>
-                {@|apply navigation-branding.block}
-                <squarespace:navigation navigationId="navigation-left" template="navigation-left" />
-            </ul>
-        </div>
-        <div class="navigation-section navigation-section-right">
-            <ul>
-                <squarespace:navigation navigationId="navigation-right" template="navigation-right" />
-            </ul>
-        </div>
+    <div id="navigation-wrapper-powered" class="navigation-wrapper revealable">
+        <ul id="navigation-list-left" class="navigation-list">
+            {@|apply navigation-branding.block}
+            <squarespace:navigation navigationId="navigation-left" template="navigation-left" />
+        </ul>
+        <ul id="navigation-list-right" class="navigation-list">
+            <squarespace:navigation navigationId="navigation-right" template="navigation-right" />
+        </ul>
     </div>
     <div id="navigation-wrapper-dummy" class="navigation-wrapper"></div>
 </nav>

@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div id="release-body" class="section-release-body">
-                <div class="body-container">
+                <div class="body-container revealable">
                     <!--MAIN CONTENT-->
                     {body}
 
@@ -77,21 +77,18 @@
 
 <script>
     // Initial settings for navigation bar
-    document.getElementById("site-navigation-wrapper-dummy").style.display = "none";
+    document.getElementById("navigation-wrapper-dummy").style.display = "none";
 
     if (window.pageYOffset <= 100) { // Only perform animations if we're above the limit
-        let layoutBody = document.getElementById("release-body");
-        let wrapperPowered = document.getElementById("site-navigation-wrapper-powered");
-
-        //        layoutBody.style.opacity = 0;
-        wrapperPowered.style.opacity = 0;
+        let layoutBody = document.getElementsByClassName("body-container")[0];
+        let wrapperPowered = document.getElementById("navigation-wrapper-powered");
 
         // Change settings on scroll
         let changed = false;
         document.addEventListener("scroll", function() {
             if (window.pageYOffset > 100 && !changed) {
-                layoutBody.classList.add("animate-in");
-                wrapperPowered.classList.add("animate-in");
+                layoutBody.classList.add("reveal-shown");
+                wrapperPowered.classList.add("reveal-shown");
 
                 changed = true;
             }
